@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0
+ * Plugin Version: 1.0.0
  * 
  */
 
@@ -17,10 +17,13 @@
 if(!defined('IN_MYBB'))
 	die('This file cannot be accessed directly.');
 
+// Add hooks
 
 $plugins->add_hook("index_end", "simpaldonate_show");
 
 $plugins->add_hook("portal_end", "simpaldonate_show"); 
+
+// Plugin Info
 
 function simpaldonate_info()
 {
@@ -28,18 +31,26 @@ function simpaldonate_info()
 
 	$lang->load("simpaldonate");
 	
-	return array(
-		"name"		=> $lang->name,
-		"description"		=> $lang->desc,
-		"website"		=> "http://community.mybb.com/user-6029.html",
-		"author"		=> "Vintagedaddyo",
-		"authorsite"		=> "http://community.mybb.com/user-6029.html",
-		"version"		=> "1.0.0",
-		"guid" 			=> "*",
-		"compatibility"	=> "18*"
-		);
+    $lang->simpaldonate_desc = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="float:right;">' .
+        '<input type="hidden" name="cmd" value="_s-xclick">' . 
+        '<input type="hidden" name="hosted_button_id" value="AZE6ZNZPBPVUL">' .
+        '<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">' .
+        '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">' .
+        '</form>' . $lang->simpaldonate_desc;
+
+    return array(
+        'name' => $lang->simpaldonate_name,
+        'description' => $lang->simpaldonate_desc,
+        'website' => $lang->simpaldonate_web,
+        'author' => $lang->simpaldonate_auth,
+        'authorsite' => $lang->simpaldonate_authsite,
+        'version' => $lang->simpaldonate_ver,
+        'guid' => $lang->simpaldonate_guid,        
+        'compatibility' => $lang->simpaldonate_compat
+    );
 }
 
+// Plugin Install
 
 function simpaldonate_install()
 {
@@ -47,11 +58,12 @@ function simpaldonate_install()
 
 	$lang->load("simpaldonate");
 
-	
+	// Setting Group
+
 	$settinggroups = array(
 		'name' 			=> 'simpaldonate', 
-		'title' 		=> $db->escape_string($lang->name),
-		'description' 	=> $db->escape_string($lang->settings_desc),
+		'title' 		=> $db->escape_string($lang->simpaldonate_p_name),
+		'description' 	=> $db->escape_string($lang->simpaldonate_p_settings_desc),
 		'disporder' 	=> '100', 
 		'isdefault' 	=> '0'
 	);
@@ -59,132 +71,149 @@ function simpaldonate_install()
 	$gid = $db->insert_query("settinggroups", $settinggroups);
 
 	$disporder = '0';
-
+    
+    // Setting 1
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatemail",
-		"title"			=> $db->escape_string($lang->settings_donate_mail),
-		"description"	=> $db->escape_string($lang->settings_donate_mail_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_mail),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_mail_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_mail_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_mail_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
 
+    // Setting 2
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatelimit",
-		"title"			=> $db->escape_string($lang->settings_donate_limit),
-		"description"	=> $db->escape_string($lang->settings_donate_limit_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_limit),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_limit_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_limit_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_limit_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 3
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatebtnloc",
-		"title"			=> $db->escape_string($lang->settings_donate_btnloc),
-		"description"	=> $db->escape_string($lang->settings_donate_btnloc_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_btnloc),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_btnloc_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_btnloc_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_btnloc_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 4
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonateloc",
-		"title"			=> $db->escape_string($lang->settings_donate_loc),
-		"description"	=> $db->escape_string($lang->settings_donate_loc_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_loc),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_loc_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_loc_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_loc_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
 
+    // Setting 5
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatecurr",
-		"title"			=> $db->escape_string($lang->settings_donate_curr),
-		"description"	=> $db->escape_string($lang->settings_donate_curr_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_curr),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_curr_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_curr_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_curr_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 6
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatereas",
-		"title"			=> $db->escape_string($lang->settings_donate_reas),
-		"description"	=> $db->escape_string($lang->settings_donate_reas_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_reas),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_reas_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_reas_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_reas_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 7
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatemessage1",
-		"title"			=> $db->escape_string($lang->settings_donate_message1),
-		"description"	=> $db->escape_string($lang->settings_donate_message1_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_message1),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_message1_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_message1_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_message1_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 8
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatemessage2",
-		"title"			=> $db->escape_string($lang->settings_donate_message2),
-		"description"	=> $db->escape_string($lang->settings_donate_message2_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_message2),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_message2_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_message2_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_message2_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
+    
+    // Setting 9
 
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatemessage3",
-		"title"			=> $db->escape_string($lang->settings_donate_message3),
-		"description"	=> $db->escape_string($lang->settings_donate_message3_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_donate_message3),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_donate_message3_desc),
 		"optionscode"	=> "text",
-		"value"			=> $db->escape_string($lang->settings_donate_message3_value),
+		"value"			=> $db->escape_string($lang->simpaldonate_settings_donate_message3_value),
 		"disporder"		=> $disporder++,
 		"gid"			=> $gid
 	);
 
 	$db->insert_query("settings", $setting);
 
+   // Setting 10
+
 	$setting = array(
 		"sid"			=> '0',
 		"name"			=> "simpaldonatecoll",
-		"title"			=> $db->escape_string($lang->settings_collapse),
-		"description"	=> $db->escape_string($lang->settings_collapse_desc),
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_collapse),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_collapse_desc),
 		"optionscode"	=> "yesno",
 		"value"			=> '1',
 		"disporder"		=> $disporder++,
@@ -195,6 +224,9 @@ function simpaldonate_install()
 	
 	rebuild_settings(); 
 
+
+    // Template
+
 	$template = array(
 		"tid" 			=> "0",
 		"title" 		=> "simpaldonate",
@@ -204,7 +236,7 @@ function simpaldonate_install()
 <tr>
 <td class="thead" colspan="1">
 {$collapse}
-<strong>{$lang->name}</strong>
+<strong>{$lang->simpaldonate_thead_name}</strong>
 </td>
 
 </tr>
@@ -244,6 +276,7 @@ function simpaldonate_install()
 
 }
 
+// Plugin is Installed
 
 function simpaldonate_is_installed()
 {
@@ -260,6 +293,8 @@ function simpaldonate_is_installed()
 	return true;
 }
 
+// Plugin Uninstall
+
 function simpaldonate_uninstall()
 {
 	global $mybb, $db, $lang;
@@ -274,6 +309,7 @@ function simpaldonate_uninstall()
 
 } 
 
+// Plugin Display
 
 function simpaldonate_show()
 {
