@@ -10,4 +10,4 @@ Current Localization:
 - englishgb
 - espanol
 - french
-* italiano - soon
+- italiano
