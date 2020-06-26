@@ -61,7 +61,7 @@ $l['simpaldonate_settings_donate_btnloc'] = 'Button Image localization';
 
 $l['simpaldonate_settings_donate_btnloc_desc'] = 'Enter the preferred localization type for donation button (ex: en_US, en_GB, es_ES, fr_FR, it_IT)';
 
-$l['simpaldonate_settings_donate_btnloc_value'] = 'en_US';
+$l['simpaldonate_settings_donate_btnloc_value'] = 'en_GB';
 
 // Setting 4
 
@@ -69,7 +69,7 @@ $l['simpaldonate_settings_donate_loc'] = 'Input localization';
 
 $l['simpaldonate_settings_donate_loc_desc'] = 'Enter the preferred localization type for hidden input locale (ex: US, GB, ES, FR, IT)';
 
-$l['simpaldonate_settings_donate_loc_value'] = 'US';
+$l['simpaldonate_settings_donate_loc_value'] = 'GB';
 
 // Setting 5
 
@@ -77,7 +77,7 @@ $l['simpaldonate_settings_donate_curr'] = 'Currency Type';
 
 $l['simpaldonate_settings_donate_curr_desc'] = 'Enter the preferred currency type for donation (ex: USD, EUR)';
 
-$l['simpaldonate_settings_donate_curr_value'] = 'USD';
+$l['simpaldonate_settings_donate_curr_value'] = 'EUR';
 
 // Setting 6
 
