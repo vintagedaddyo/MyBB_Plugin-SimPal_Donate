@@ -31,9 +31,9 @@ function simpaldonate_info()
 	return array(
 		"name"		=> $lang->name,
 		"description"		=> $lang->desc,
-		"website"		=> "",
+		"website"		=> "http://community.mybb.com/user-6029.html",
 		"author"		=> "Vintagedaddyo",
-		"authorsite"		=> "",
+		"authorsite"		=> "http://community.mybb.com/user-6029.html",
 		"version"		=> "1.0.0",
 		"guid" 			=> "*",
 		"compatibility"	=> "18*"
