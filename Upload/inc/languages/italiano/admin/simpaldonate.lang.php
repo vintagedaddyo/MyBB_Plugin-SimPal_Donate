@@ -41,90 +41,90 @@ $l['simpaldonate_p_settings_desc'] = 'Plugin impostazioni SimPal Dona';
 
 // Setting 1
 
-$l['simpaldonate_settings_donate_mail'] = 'Paypal Email';
+$l['simpaldonate_settings_donate_mail'] = 'Email Paypal';
 
-$l['simpaldonate_settings_donate_mail_desc'] = 'Enter your paypal account email (ex: name@youremail.com)';
+$l['simpaldonate_settings_donate_mail_desc'] = 'Inserisci l e-mail del tuo account paypal (ex: nome@postaelettronica.com)';
 
-$l['simpaldonate_settings_donate_mail_value'] = 'name@youremail.com';
+$l['simpaldonate_settings_donate_mail_value'] = 'nome@postaelettronica.com';
 
 // Setting 2
 
-$l['simpaldonate_settings_donate_limit'] = 'Amount of suggested minimum donation';
+$l['simpaldonate_settings_donate_limit'] = 'Importo della donazione minima suggerita';
 
-$l['simpaldonate_settings_donate_limit_desc'] = 'Enter the suggested minimum amount of donation (ex: 1.00)';
+$l['simpaldonate_settings_donate_limit_desc'] = 'Inserisci l importo minimo suggerito di donazione (ex: 1.00)';
 
 $l['simpaldonate_settings_donate_limit_value'] = '1.00';
 
 // Setting 3
 
-$l['simpaldonate_settings_donate_btnloc'] = 'Button Image localization';
+$l['simpaldonate_settings_donate_btnloc'] = 'Localizzazione delle immagini dei pulsanti';
 
-$l['simpaldonate_settings_donate_btnloc_desc'] = 'Enter the preferred localization type for donation button (ex: en_US, en_GB, es_ES, fr_FR, it_IT)';
+$l['simpaldonate_settings_donate_btnloc_desc'] = 'Immettere il tipo di localizzazione preferito per il pulsante Donazione (ex: en_US, en_GB, es_ES, fr_FR, it_IT)';
 
 $l['simpaldonate_settings_donate_btnloc_value'] = 'it_IT';
 
 // Setting 4
 
-$l['simpaldonate_settings_donate_loc'] = 'Input localization';
+$l['simpaldonate_settings_donate_loc'] = 'Localizzazione dell input';
 
-$l['simpaldonate_settings_donate_loc_desc'] = 'Enter the preferred localization type for hidden input locale (ex: US, GB, ES, FR, IT)';
+$l['simpaldonate_settings_donate_loc_desc'] = 'Immettere il tipo di localizzazione preferito per le impostazioni locali di input nascoste (ex: US, GB, ES, FR, IT)';
 
 $l['simpaldonate_settings_donate_loc_value'] = 'IT';
 
 // Setting 5
 
-$l['simpaldonate_settings_donate_curr'] = 'Currency Type';
+$l['simpaldonate_settings_donate_curr'] = 'Tipo di valuta';
 
-$l['simpaldonate_settings_donate_curr_desc'] = 'Enter the preferred currency type for donation (ex: USD, EUR)';
+$l['simpaldonate_settings_donate_curr_desc'] = 'Inserisci il tipo di valuta preferito per la donazione (ex: USD, EUR)';
 
 $l['simpaldonate_settings_donate_curr_value'] = 'EUR';
 
 // Setting 6
 
-$l['simpaldonate_settings_donate_reas'] = 'Donation Purpose:';
+$l['simpaldonate_settings_donate_reas'] = 'Scopo della donazione:';
 
-$l['simpaldonate_settings_donate_reas_desc'] = 'Enter the preferred purposer name type for donation (ex: Donate!)';
+$l['simpaldonate_settings_donate_reas_desc'] = 'Inserisci il tipo di nome preferito per la donazione (ex: Donare!)';
 
-$l['simpaldonate_settings_donate_reas_value'] = 'Donate!';
+$l['simpaldonate_settings_donate_reas_value'] = 'Donare!';
 
 // Setting 7
 
-$l['simpaldonate_settings_donate_message1'] = 'Message Part 1';
+$l['simpaldonate_settings_donate_message1'] = 'Messaggio Parte 1';
 
-$l['simpaldonate_settings_donate_message1_desc'] = 'Message Part 1 intro message line (ex: This site costs a lot of money to run, with the domain name, 
-hosting, etc.)';
+$l['simpaldonate_settings_donate_message1_desc'] = 'Riga di messaggio introduttiva del messaggio Parte 1 (ex: TQuesto sito costa molti soldi per funzionare, con il nome di dominio,
+hosting, ecc.)';
 
-$l['simpaldonate_settings_donate_message1_value'] = 'This site costs a lot of money to run, with the domain name, 
-hosting, etc.';
+$l['simpaldonate_settings_donate_message1_value'] = 'Questo sito costa molti soldi per funzionare, con il nome di dominio,
+hosting, ecc.';
 
 // Setting 8
 
-$l['simpaldonate_settings_donate_message2'] = 'Message Part 2';
+$l['simpaldonate_settings_donate_message2'] = 'Messaggio Parte 2';
 
-$l['simpaldonate_settings_donate_message2_desc'] = 'Message Part 2 secondary line (ex: We are asking you, the user, to please donate some money, any 
-amount above )';
+$l['simpaldonate_settings_donate_message2_desc'] = 'Messaggio Parte 2 riga secondaria (ex: Chiediamo all utente, per favore, di donare qualche soldo
+importo sopra )';
 
-$l['simpaldonate_settings_donate_message2_value'] = 'We are asking you, the user, to please donate some money, any 
-amount above ';
+$l['simpaldonate_settings_donate_message2_value'] = 'Chiediamo all utente, per favore, di donare qualche soldo
+importo sopra ';
 
 // Setting 9
 
-$l['simpaldonate_settings_donate_message3'] = 'Message Part 3';
+$l['simpaldonate_settings_donate_message3'] = 'Messaggio Parte 3';
 
-$l['simpaldonate_settings_donate_message3_desc'] = 'secondary line final part of your message after notice of preferred minimum donation amount and preferred currency type (ex: is accepted!)';
+$l['simpaldonate_settings_donate_message3_desc'] = 'parte finale della riga secondaria del messaggio dopo la comunicazione dell importo minimo di donazione preferito e del tipo di valuta preferito (ex: e accettato!)';
 
-$l['simpaldonate_settings_donate_message3_value'] = 'is accepted!';
+$l['simpaldonate_settings_donate_message3_value'] = 'e accettato!';
 
 // Setting 10
 
-$l['simpaldonate_settings_collapse'] = 'Collapse enabled donation table';
+$l['simpaldonate_settings_collapse'] = 'Comprimi tabella di donazione abilitata';
 
-$l['simpaldonate_settings_collapse_desc'] = 'Will donation table be collapse capable or not?';
+$l['simpaldonate_settings_collapse_desc'] = 'La tabella delle donazioni sara in grado di collassare o no?';
 
 // Setting 11
 
-$l['simpaldonate_settings_enable'] = 'Enable the plugin?';
+$l['simpaldonate_settings_enable'] = 'Abilitare il plugin?';
 
-$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not?';
+$l['simpaldonate_settings_enable_desc'] = 'Il plugin sara abilitato o no?';
 
 ?>
