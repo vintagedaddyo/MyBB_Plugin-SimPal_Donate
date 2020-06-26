@@ -221,6 +221,21 @@ function simpaldonate_install()
 	);
 
 	$db->insert_query("settings", $setting);
+
+   // Setting 11
+
+	$setting = array(
+		"sid"			=> '0',
+		"name"			=> "simpaldonate_enable",
+		"title"			=> $db->escape_string($lang->simpaldonate_settings_enable),
+		"description"	=> $db->escape_string($lang->simpaldonate_settings_enable_desc),
+		"optionscode"	=> "yesno",
+		"value"			=> '1',
+		"disporder"		=> $disporder++,
+		"gid"			=> $gid
+	);
+
+	$db->insert_query("settings", $setting);
 	
 	rebuild_settings(); 
 
@@ -316,6 +331,10 @@ function simpaldonate_show()
 	global $db, $mybb, $page, $simpaldonate, $theme, $templates, $lang;
 
     $lang->load("simpaldonate");
+
+
+    if ($mybb->settings['simpaldonate_enable'] == 1)
+    {    
 	
 		if($mybb->settings['simpaldonatecoll'] == '1')
 		{
@@ -325,6 +344,7 @@ function simpaldonate_show()
         }
 
 	eval('$simpaldonate = "'.$templates->get('simpaldonate').'";');
+    }
 }
 
 ?>

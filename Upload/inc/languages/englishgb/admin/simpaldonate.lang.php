@@ -121,4 +121,10 @@ $l['simpaldonate_settings_collapse'] = 'Collapse enabled donation table';
 
 $l['simpaldonate_settings_collapse_desc'] = 'Will donation table be collapse capable or not?';
 
+// Setting 11
+
+$l['simpaldonate_settings_enable'] = 'Enable the plugin?';
+
+$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not?';
+
 ?>
