@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0.0
+ * Plugin Version: 1.1
  * 
  */
 
@@ -236,6 +236,9 @@ function simpaldonate_install()
 	);
 
 	$db->insert_query("settings", $setting);
+
+
+	// Rebuild
 	
 	rebuild_settings(); 
 
@@ -332,10 +335,12 @@ function simpaldonate_show()
 
     $lang->load("simpaldonate");
 
+    // Plugin enable or disable display
 
-    if ($mybb->settings['simpaldonate_enable'] == 1)
+    if ($mybb->settings['simpaldonate_enable'] == '1')
     {    
-	
+	    // Collapse enable or disable display
+
 		if($mybb->settings['simpaldonatecoll'] == '1')
 		{
 
