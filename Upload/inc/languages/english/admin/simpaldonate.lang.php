@@ -25,7 +25,7 @@ $l['settings_donate_mail_value'] = 'name@youremail.com';
 
 
 $l['settings_donate_limit'] = 'Amount of suggested minimum donation';
-$l['settings_donate_limit_desc'] = 'Enter the suggested minimimum amount of donation (ex: 1.00)';
+$l['settings_donate_limit_desc'] = 'Enter the suggested minimum amount of donation (ex: 1.00)';
 $l['settings_donate_limit_value'] = '1.00';
 
 $l['settings_donate_btnloc'] = 'Button Image localization';
