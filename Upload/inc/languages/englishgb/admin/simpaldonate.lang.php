@@ -37,7 +37,7 @@ $l['simpaldonate_p_name'] = 'SimPal Donate';
 
 $l['simpaldonate_p_desc'] = 'This plugin creates a simple paypal donation form for index and portal insertions';
 
-$l['simpaldonate_p_settings_desc'] = 'Settings plugin SimPalDonate';
+$l['simpaldonate_p_settings_desc'] = 'Settings plugin SimPal Donate';
 
 // Setting 1
 
@@ -59,7 +59,7 @@ $l['simpaldonate_settings_donate_limit_value'] = '1.00';
 
 $l['simpaldonate_settings_donate_btnloc'] = 'Button Image localization';
 
-$l['simpaldonate_settings_donate_btnloc_desc'] = 'Enter the preferred localization type for donation button (ex: en_US, en_GB, es_ES, fr_FR)';
+$l['simpaldonate_settings_donate_btnloc_desc'] = 'Enter the preferred localization type for donation button (ex: en_US, en_GB, es_ES, fr_FR, it_IT)';
 
 $l['simpaldonate_settings_donate_btnloc_value'] = 'en_US';
 
@@ -67,7 +67,7 @@ $l['simpaldonate_settings_donate_btnloc_value'] = 'en_US';
 
 $l['simpaldonate_settings_donate_loc'] = 'Input localization';
 
-$l['simpaldonate_settings_donate_loc_desc'] = 'Enter the preferred localization type for hidden input locale (ex: US, GB, ES, FR)';
+$l['simpaldonate_settings_donate_loc_desc'] = 'Enter the preferred localization type for hidden input locale (ex: US, GB, ES, FR, IT)';
 
 $l['simpaldonate_settings_donate_loc_value'] = 'US';
 
