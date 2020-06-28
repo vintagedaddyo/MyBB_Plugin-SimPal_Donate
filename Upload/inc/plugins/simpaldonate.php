@@ -292,6 +292,16 @@ function simpaldonate_install()
 
 	    $db->insert_query("templates", $template);
 
+            // Template inserts insert
+
+            include MYBB_ROOT . "/inc/adminfunctions_templates.php";
+            
+            find_replace_templatesets("portal", "#" . preg_quote("{\$welcome}") . "#i", "{\$simpaldonate}\r\n
+        {\$welcome}");
+
+            find_replace_templatesets("index", "#" . preg_quote("{\$header}") . "#i", "{\$header}\r\n
+        {\$simpaldonate}");
+
 }
 
 // Plugin is Installed
@@ -324,7 +334,16 @@ function simpaldonate_uninstall()
 	$db->delete_query('settings', 'name LIKE \'%simpaldonate%\'');
 
 	$db->delete_query('templates', 'title LIKE (\'%simpaldonate%\')');
+	
+        // Template inserts remove
 
+        include MYBB_ROOT . "/inc/adminfunctions_templates.php";
+  
+        find_replace_templatesets("portal", "#" . preg_quote("{\$simpaldonate}\r\n") . "#i", "", 0);
+        
+        find_replace_templatesets("index", "#" . preg_quote("\r\n
+        {\$simpaldonate}") . "#i", "", 0);  
+              
 } 
 
 // Plugin Display
