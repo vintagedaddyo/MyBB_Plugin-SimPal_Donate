@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -25,7 +25,7 @@ $l['simpaldonate_auth'] = 'Vintagedaddyo';
 
 $l['simpaldonate_authsite'] = 'http://community.mybb.com/user-6029.html';
 
-$l['simpaldonate_ver'] = '1.1';
+$l['simpaldonate_ver'] = '1.2';
 
 $l['simpaldonate_guid'] = '*';
 
@@ -61,7 +61,7 @@ $l['simpaldonate_settings_donate_btnloc'] = 'Button Image localization';
 
 $l['simpaldonate_settings_donate_btnloc_desc'] = 'Enter the preferred localization type for donation button (ex: en_US, en_GB, es_ES, fr_FR, it_IT)';
 
-$l['simpaldonate_settings_donate_btnloc_value'] = 'en_GB';
+$l['simpaldonate_settings_donate_btnloc_value'] = 'en_US';
 
 // Setting 4
 
@@ -69,7 +69,7 @@ $l['simpaldonate_settings_donate_loc'] = 'Input localization';
 
 $l['simpaldonate_settings_donate_loc_desc'] = 'Enter the preferred localization type for hidden input locale (ex: US, GB, ES, FR, IT)';
 
-$l['simpaldonate_settings_donate_loc_value'] = 'GB';
+$l['simpaldonate_settings_donate_loc_value'] = 'US';
 
 // Setting 5
 
@@ -77,7 +77,7 @@ $l['simpaldonate_settings_donate_curr'] = 'Currency Type';
 
 $l['simpaldonate_settings_donate_curr_desc'] = 'Enter the preferred currency type for donation (ex: USD, EUR)';
 
-$l['simpaldonate_settings_donate_curr_value'] = 'EUR';
+$l['simpaldonate_settings_donate_curr_value'] = 'USD';
 
 // Setting 6
 
@@ -125,6 +125,18 @@ $l['simpaldonate_settings_collapse_desc'] = 'Will donation table be collapse cap
 
 $l['simpaldonate_settings_enable'] = 'Enable the plugin?';
 
-$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not?';
+$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not? (Note: this will override display settings found below)';
+
+// Setting 12
+
+$l['simpaldonate_settings_index'] = 'Enable the plugin display on index?';
+
+$l['simpaldonate_settings_index_desc'] = 'Will plugin display be enabled or not on the index?';
+
+// Setting 13
+
+$l['simpaldonate_settings_portal'] = 'Enable the plugin display on portal?';
+
+$l['simpaldonate_settings_portal_desc'] = 'Will plugin display be enabled or not on the portal?';
 
 ?>

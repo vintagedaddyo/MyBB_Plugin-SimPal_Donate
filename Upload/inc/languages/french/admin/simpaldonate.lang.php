@@ -25,7 +25,7 @@ $l['simpaldonate_auth'] = 'Vintagedaddyo';
 
 $l['simpaldonate_authsite'] = 'http://community.mybb.com/user-6029.html';
 
-$l['simpaldonate_ver'] = '1.1';
+$l['simpaldonate_ver'] = '1.2';
 
 $l['simpaldonate_guid'] = '*';
 
@@ -125,6 +125,18 @@ $l['simpaldonate_settings_collapse_desc'] = 'La table de dons pourra-t-elle s ef
 
 $l['simpaldonate_settings_enable'] = 'Activer le plugin?';
 
-$l['simpaldonate_settings_enable_desc'] = 'Le plugin sera-t-il active ou non?';
+$l['simpaldonate_settings_enable_desc'] = 'Le plugin sera-t-il active ou non? (Remarque: cela remplacera les parametres d affichage ci-dessous)';
+
+// Setting 12
+
+$l['simpaldonate_settings_index'] = 'Activer l affichage du plugin sur l index?';
+
+$l['simpaldonate_settings_index_desc'] = 'L affichage du plugin sera-t-il active ou non sur l index?';
+
+// Setting 13
+
+$l['simpaldonate_settings_portal'] = 'Activer l affichage du plugin sur le portail?';
+
+$l['simpaldonate_settings_portal_desc'] = 'L affichage du plugin sera-t-il active ou non sur le portail?';
 
 ?>

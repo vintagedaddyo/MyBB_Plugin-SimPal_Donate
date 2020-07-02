@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -25,7 +25,7 @@ $l['simpaldonate_auth'] = 'Vintagedaddyo';
 
 $l['simpaldonate_authsite'] = 'http://community.mybb.com/user-6029.html';
 
-$l['simpaldonate_ver'] = '1.1';
+$l['simpaldonate_ver'] = '1.2';
 
 $l['simpaldonate_guid'] = '*';
 
@@ -125,6 +125,18 @@ $l['simpaldonate_settings_collapse_desc'] = 'La tabella delle donazioni sara in 
 
 $l['simpaldonate_settings_enable'] = 'Abilitare il plugin?';
 
-$l['simpaldonate_settings_enable_desc'] = 'Il plugin sara abilitato o no?';
+$l['simpaldonate_settings_enable_desc'] = 'Il plugin sarà abilitato o no? (Nota: questo sostituira le impostazioni di visualizzazione trovate di seguito)';
+
+// Setting 12
+
+$l['simpaldonate_settings_index'] = 'Abilitare la visualizzazione del plugin sull indice?';
+
+$l['simpaldonate_settings_index_desc'] = 'La visualizzazione del plug-in sara abilitata o meno sull indice?';
+
+// Setting 13
+
+$l['simpaldonate_settings_portal'] = 'Abilitare la visualizzazione dei plugin sul portale?';
+
+$l['simpaldonate_settings_portal_desc'] = 'La visualizzazione dei plug-in sara abilitata o meno sul portale?';
 
 ?>

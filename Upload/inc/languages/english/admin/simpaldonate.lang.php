@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -25,7 +25,7 @@ $l['simpaldonate_auth'] = 'Vintagedaddyo';
 
 $l['simpaldonate_authsite'] = 'http://community.mybb.com/user-6029.html';
 
-$l['simpaldonate_ver'] = '1.1';
+$l['simpaldonate_ver'] = '1.2';
 
 $l['simpaldonate_guid'] = '*';
 
@@ -125,6 +125,18 @@ $l['simpaldonate_settings_collapse_desc'] = 'Will donation table be collapse cap
 
 $l['simpaldonate_settings_enable'] = 'Enable the plugin?';
 
-$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not?';
+$l['simpaldonate_settings_enable_desc'] = 'Will plugin be enabled or not? (Note: this will override display settings found below)';
+
+// Setting 12
+
+$l['simpaldonate_settings_index'] = 'Enable the plugin display on index?';
+
+$l['simpaldonate_settings_index_desc'] = 'Will plugin display be enabled or not on the index?';
+
+// Setting 13
+
+$l['simpaldonate_settings_portal'] = 'Enable the plugin display on portal?';
+
+$l['simpaldonate_settings_portal_desc'] = 'Will plugin display be enabled or not on the portal?';
 
 ?>

@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -25,7 +25,7 @@ $l['simpaldonate_auth'] = 'Vintagedaddyo';
 
 $l['simpaldonate_authsite'] = 'http://community.mybb.com/user-6029.html';
 
-$l['simpaldonate_ver'] = '1.1';
+$l['simpaldonate_ver'] = '1.2';
 
 $l['simpaldonate_guid'] = '*';
 
@@ -125,6 +125,18 @@ $l['simpaldonate_settings_collapse_desc'] = '¿La mesa de donacion sera capaz de
 
 $l['simpaldonate_settings_enable'] = '¿Habilitar el complemento?';
 
-$l['simpaldonate_settings_enable_desc'] = '¿El complemento estara habilitado o no?';
+$l['simpaldonate_settings_enable_desc'] = '¿El complemento estara habilitado o no? (Nota: esto anulará la configuracion de visualizacion que se encuentra a continuacion)';
+
+// Setting 12
+
+$l['simpaldonate_settings_index'] = '¿Habilitar la visualizacion del complemento en el indice?';
+
+$l['simpaldonate_settings_index_desc'] = '¿La visualizacion del complemento estara habilitada o no en el indice?';
+
+// Setting 13
+
+$l['simpaldonate_settings_portal'] = '¿Habilitar la visualizacion del complemento en el portal?';
+
+$l['simpaldonate_settings_portal_desc'] = '¿La visualizacion del complemento estara habilitada o no en el portal?';
 
 ?>
