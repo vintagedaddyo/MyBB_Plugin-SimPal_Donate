@@ -370,7 +370,6 @@ function simpaldonate_install()
 
 	    $db->insert_query("templates", $template);
 
-
             // Template inserts insert
 
             include MYBB_ROOT . "/inc/adminfunctions_templates.php";
@@ -380,12 +379,6 @@ function simpaldonate_install()
 
             find_replace_templatesets("index", "#" . preg_quote("{\$header}") . "#i", "{\$header}\r\n
         {\$simpaldonateindex}");
-
-            find_replace_templatesets("portal", "#" . preg_quote("{\$welcome}") . "#i", "{\$simpaldonate}\r\n
-        {\$welcome}");
-
-            find_replace_templatesets("index", "#" . preg_quote("{\$header}") . "#i", "{\$header}\r\n
-        {\$simpaldonate}");
 
 }
 
@@ -420,7 +413,6 @@ function simpaldonate_uninstall()
 
 	$db->delete_query('templates', 'title LIKE (\'%simpaldonate%\')');
 	
-
 	$db->delete_query('templates', 'title LIKE (\'%simpaldonateindex%\')');
 	
 	$db->delete_query('templates', 'title LIKE (\'%simpaldonateportal%\')');
@@ -434,11 +426,6 @@ function simpaldonate_uninstall()
         
         find_replace_templatesets("index", "#" . preg_quote("\r\n
         {\$simpaldonateindex}") . "#i", "", 0);  
-
-        find_replace_templatesets("portal", "#" . preg_quote("{\$simpaldonate}\r\n") . "#i", "", 0);
-        
-        find_replace_templatesets("index", "#" . preg_quote("\r\n
-        {\$simpaldonate}") . "#i", "", 0);  
               
 } 
 
