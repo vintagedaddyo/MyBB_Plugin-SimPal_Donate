@@ -279,7 +279,7 @@ function simpaldonate_install()
 		"title" 		=> "simpaldonateindex",
 		"template"		=> $db->escape_string('<style type="text/css"></style>
 
-		<table border="0" cellspacing="{$theme[\'borderwidth\']}" cellpadding="{$theme[\'tablespace\']}" class="tborder" style="clear: both; border-bottom-width: 0;">
+		<table border="0" cellspacing="{$theme[\'borderwidth\']}" cellpadding="{$theme[\'tablespace\']}" class="tborder" style="clear: both; border-bottom-width: 1px;">
 <tr>
 <td class="thead" colspan="1">
 {$collapse}
@@ -328,7 +328,7 @@ function simpaldonate_install()
 		"title" 		=> "simpaldonateportal",
 		"template"		=> $db->escape_string('<style type="text/css"></style>
 
-		<table border="0" cellspacing="{$theme[\'borderwidth\']}" cellpadding="{$theme[\'tablespace\']}" class="tborder" style="clear: both; border-bottom-width: 0;">
+		<table border="0" cellspacing="{$theme[\'borderwidth\']}" cellpadding="{$theme[\'tablespace\']}" class="tborder" style="clear: both; border-bottom-width: 1px;">
 <tr>
 <td class="thead" colspan="1">
 {$collapse}
