@@ -32,7 +32,7 @@ Optional * if desired #4 & #5
  Insert variable:
   {$simpaldonateindex} where you want.*
 
-4. Go to ACP -> Styles and templates -> Templates -> Your_Template -> Home -> portal -> 
+ 5. Go to ACP -> Styles and templates -> Templates -> Your_Template -> Home -> portal -> 
 
 Insert variable: {$simpaldonateportal} where you want.*
  
